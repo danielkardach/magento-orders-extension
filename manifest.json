@@ -13,7 +13,7 @@
 	},
 
 	"permissions": [
-		"https://*/*"
+		"<all_urls>"
 	],
 
 	"background": {
