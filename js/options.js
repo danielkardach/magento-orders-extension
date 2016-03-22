@@ -32,6 +32,15 @@ function saveOptions() {
 
 	localStorage["optionsLogin"] = login;
 	localStorage["optionsPassword"] = pass;
+	
+	if (localStorage["optionsLogin"] != undefined 
+		&& localStorage["optionsPassword"] != undefined
+		&& localStorage["optionsLogin"] != "undefined" 
+		&& localStorage["optionsPassword"] != "undefined") {
+			chrome.runtime.sendMessage({options: "ready2go"}, function(response) {
+  				//console.log(response.farewell);
+		});
+	}
 }
 
 function eraseOptions() {
